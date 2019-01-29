@@ -1,0 +1,41 @@
+Burger Builder
+
+Header Nav with Builder, Orders, Logo etc.
+
+______________________________________________________________
+
+-> Builder
+	Burger preview ingredient stack
+	controls for ingredients (+ -) buttons
+	checkout button
+	price preview
+
+Components -> 
+	App (optionally stateful)
+	-> Layout
+		-> Toolbar (always displayed but varied by viewport)  
+			-> DrawerToggle, Logo, Navigation Items
+		-> sideDrawer
+			-> DrawerToggle, Logo, Navigation Items
+		-> Backdrop
+		-> {props.children} 
+			-> Different Pages
+				-> Burger Builder (stateful component)
+					-> Build Controls
+						-> Control Elements ...
+						-> Order Button
+					-> Burger Preview
+						-> Ingredients ...
+					-> Modal Checkout Review
+						-> {props.children} (confirmation msg, error msg, order info etc...}
+				-> Past Orders 
+
+-_-_-_-_-_--_-_-_-_-_--_-_-_-_-_--_-_-_-_-_--_-_-_-_-_--_-_-_-_-_-
+
+Burger Builder State
+	-> Ingredients
+		{meat: 1, cheese: 2}
+		purchased: true;
+		totalPrice: 12.99;
+
+-_-_-_-_-_--_-_-_-_-_--_-_-_-_-_--_-_-_-_-_--_-_-_-_-_--_-_-_-_-_-
