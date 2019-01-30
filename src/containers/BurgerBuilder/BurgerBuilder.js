@@ -12,4 +12,4 @@ class BurgerBuilder extends Component{
   }
 }
 
-export default burgerBuilder;
+export default BurgerBuilder;
