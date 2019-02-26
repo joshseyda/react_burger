@@ -1,5 +1,5 @@
 import React from 'react';
-import favicon from '../../assets/images/favicon.ico';
+import favicon from '../../assets/images/burger-logo.png';
 import styles from './Logo.module.css';
 
 const logo = (props) => (
