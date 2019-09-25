@@ -123,8 +123,8 @@ class BurgerBuilder extends Component{
       orderSummary = <Spinner />
     }
 
-    let burger = this.state.error ? <p>Ingredients can't be loaded </p> : <Spinner />
-    if (this.state.ingredients) {
+    let burger = this.state.error ? <p>Ingredients can't be loaded </p> : <Spinner />;
+    if (this.state.ingredients) { // checks to see if the page loaded before creating the burger
       burger  = (
         <Aux>        
           <Burger ingredients={this.state.ingredients} />
