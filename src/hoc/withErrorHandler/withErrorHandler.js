@@ -18,7 +18,7 @@ const withErrorHandler = ( WrappedComponent, axios ) => {
             });
         }
 
-        componentWillUnmount() {
+        componentWillUnmount() { // saves on memory leaks building up when we implement withErrorHandler in multiple places
             axios.interceptors.request.eject(this.reqInterceptor);
             axios.interceptors.response.eject(this.resInterceptor);
         }
