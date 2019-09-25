@@ -89,7 +89,7 @@ class BurgerBuilder extends Component{
     this.setState({loading: true});
     const order = {
       ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
+      price: this.state.totalPrice, // this is not a secure way of calculating price, should be done server side to avoid manipulation!
       customer: {
         name: 'Max',
         address:{
