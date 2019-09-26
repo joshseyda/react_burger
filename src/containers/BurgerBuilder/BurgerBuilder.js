@@ -89,7 +89,7 @@ class BurgerBuilder extends Component{
     this.setState({loading: true});
     const order = {
       ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
+      price: this.state.totalPrice, // this is not a secure way of calculating price, should be done server side to avoid manipulation!
       customer: {
         name: 'Max',
         address:{
@@ -123,8 +123,8 @@ class BurgerBuilder extends Component{
       orderSummary = <Spinner />
     }
 
-    let burger = this.state.error ? <p>Ingredients can't be loaded </p> : <Spinner />
-    if (this.state.ingredients) {
+    let burger = this.state.error ? <p>Ingredients can't be loaded </p> : <Spinner />;
+    if (this.state.ingredients) { // checks to see if the page loaded before creating the burger
       burger  = (
         <Aux>        
           <Burger ingredients={this.state.ingredients} />
